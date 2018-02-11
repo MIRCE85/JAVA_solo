@@ -9,12 +9,15 @@ package exemple_liste;
  *
  * @author Mircea
  */
-public class GasesteMinim {
-    	
+public  class GasesteMinim
 
+{
+
+    
+    	
 // pre: list != null, list.length > 0
 	// post: return index of minimum element of array
-	public static int findMin(int[] list)
+public   int findMin(int[] list)
 	{	assert list != null && list.length > 0 : "failed precondition";
 
 		int indexOfMin = 0;
@@ -27,4 +30,19 @@ public class GasesteMinim {
 		return indexOfMin;
 	}
 
+public   int findMinValue(int[] list)
+	{	assert list != null && list.length > 0 : "failed precondition";
+
+		int indexOfMin = 0;
+		for(int i = 1; i < list.length; i++)
+		{	if(list[i] < list[indexOfMin])
+			{	indexOfMin = i;
+			}
+		}
+
+		return list[indexOfMin];
+	}
+        
 }
+
+
